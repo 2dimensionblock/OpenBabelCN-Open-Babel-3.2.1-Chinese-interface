@@ -14,7 +14,9 @@ Open Babel 中文工作台 (OpenBabelCN) 1.0.0 — Windows 64 位便携版
 
 Windows 文件已编译；核心计算测试范围见“验证说明.txt”。
 尚未完成 Windows 实机图形界面验证。
-这是自定义中文界面，不是 Open Babel 官方 GUI 发行版。
+
+!注意：这是自定义中文界面，不是 Open Babel 官方 GUI 发行版！
+！Note: This is a custom Chinese interface, not an official Open Babel GUI distribution！
 
 程序说明
 OpenBabel 中文工作台由二进制可执行程序和分子计算引擎组成。
