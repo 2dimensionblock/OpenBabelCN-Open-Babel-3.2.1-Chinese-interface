@@ -26,6 +26,6 @@ OpenBabel 中文工作台由二进制可执行程序和分子计算引擎组成�
 Program statement
 Open Babel Chinese Workbench consists of a compiled binary application and a molecular computation engine.
 
-Binary application: A native C++ application designed for 64-bit Windows, featuring a fully Chinese graphical interface. It supports file selection and drag-and-drop, SMILES input, batch processing, parameter configuration, result export, and 2D molecular previews. Distributed as a portable package, it can be launched after full extraction without separately installing Python or Open Babel.
+#Binary application: A native C++ application designed for 64-bit Windows, featuring a fully Chinese graphical interface. It supports file selection and drag-and-drop, SMILES input, batch processing, parameter configuration, result export, and 2D molecular previews. Distributed as a portable package, it can be launched after full extraction without separately installing Python or Open Babel.
 
 #Computation engine: Built from the Open Babel 3.2.1 source code, the engine runs in a separate background process. It performs chemical file format conversion, 2D and 3D coordinate generation, hydrogen addition and removal, protonation-state adjustment, force-field energy minimization, partial-charge calculation, PDBQT export, and molecular property analysis. All computations run locally, with support for task cancellation, diagnostic reporting, and property tables with Chinese column headings.
