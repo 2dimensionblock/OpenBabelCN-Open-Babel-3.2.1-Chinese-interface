@@ -1,0 +1,3 @@
+fd80f5a9d85861adebf955826567d7df486ad6f39af0b1dbe0e3de58ff2c9a8c  OpenBabelCN.exe
+c3589a9ea3b527511a2f212befd8c96a85d5b0cdecfd06cd8fe163ce21aac861  engine/obengine.exe
+83bffbb82087ffcc864eec8cc237b0a1982e487c75aed495b3e87d8a317812ee  engine/obabel.exe
