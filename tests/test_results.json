@@ -1,0 +1,74 @@
+{
+  "engine": "build-native/bin/obengine",
+  "platform": "posix",
+  "total": 13,
+  "passed": 13,
+  "results": [
+    {
+      "test": "核心格式注册",
+      "passed": true,
+      "seconds": 0.0
+    },
+    {
+      "test": "多分子二维转换与往返",
+      "passed": true,
+      "seconds": 0.02
+    },
+    {
+      "test": "中文属性表与已知分子性质",
+      "passed": true,
+      "seconds": 0.03
+    },
+    {
+      "test": "添加与去除显式氢",
+      "passed": true,
+      "seconds": 0.06
+    },
+    {
+      "test": "酸碱度质子化",
+      "passed": true,
+      "seconds": 0.01
+    },
+    {
+      "test": "三维生成与 MMFF94 优化",
+      "passed": true,
+      "seconds": 0.06
+    },
+    {
+      "test": "柔性与刚性 PDBQT",
+      "passed": true,
+      "seconds": 0.13
+    },
+    {
+      "test": "部分电荷写入 MOL2",
+      "passed": true,
+      "seconds": 0.02
+    },
+    {
+      "test": "分子拆分与单分子格式保护",
+      "passed": true,
+      "seconds": 0.03
+    },
+    {
+      "test": "最大连通片段",
+      "passed": true,
+      "seconds": 0.01
+    },
+    {
+      "test": "无效输入与参数失败处理",
+      "passed": true,
+      "seconds": 0.01
+    },
+    {
+      "test": "InChI 生成",
+      "passed": true,
+      "seconds": 0.01
+    },
+    {
+      "test": "中文路径与名称",
+      "passed": true,
+      "seconds": 0.01
+    }
+  ],
+  "scope": "同源 Linux 引擎功能测试；不代表 Windows 窗口交互已验证。"
+}

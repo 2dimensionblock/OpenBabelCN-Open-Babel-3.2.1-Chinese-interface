@@ -1,0 +1,57 @@
+--- a/data/bin2hex.pl
++++ b/data/bin2hex.pl
+@@ -21,7 +21,7 @@
+ 
+ # Autoflush STDOUT
+ #STDOUT->autoflush(1);
+-$| = 1;
++$| = 0; # Buffered output for reliable and faster header generation.
+ 
+ $argc = @ARGV;
+ if( $argc == 2 ) {
+--- a/src/formats/libinchi/inchi_dll.c
++++ b/src/formats/libinchi/inchi_dll.c
+@@ -3663,7 +3663,7 @@
+ }
+ #endif
+ 
+-#if( defined(__GNUC__) && __GNUC__ >= 3 && defined(__MINGW32__) && defined(_WIN32) )
++#if( defined(__GNUC__) && __GNUC__ >= 3 && defined(__MINGW32__) && defined(_WIN32) && defined(BUILD_LINK_AS_DLL) )
+ #include <windows.h>
+ /*********************************************************/
+ /*   Pacal calling conventions export from Win32 dll     */
+--- a/src/ops/gen3d.cpp
++++ b/src/ops/gen3d.cpp
+@@ -135,17 +135,21 @@
+     molCopy.SetDimension(3);
+     molCopy.AddHydrogens(false, false); // Add some hydrogens before running MMFF
+ 
+-    if (speed == 5)
++    if (speed == 5) {
++      *pmol = molCopy;
+       return true; // done
++    }
+ 
+     // All other speed levels do some FF cleanup
+     // Try MMFF94 first and UFF if that doesn't work
+     OBForceField* pFF = OBForceField::FindForceField("MMFF94");
+-    if (!pFF)
++    if (!pFF) {
++      *pmol = molCopy;
+       return true;
++    }
+     if (!pFF->Setup(molCopy)) {
+       pFF = OBForceField::FindForceField("UFF");
+-      if (!pFF || !pFF->Setup(molCopy)) return true; // can't use either MMFF94 or UFF
++      if (!pFF || !pFF->Setup(molCopy)) { *pmol = molCopy; return true; } // can't use either MMFF94 or UFF
+     }
+ 
+     // Since we only want a rough geometry, use distance cutoffs for VDW, Electrostatics
+@@ -174,6 +178,7 @@
+ 
+     if (speed == 4) {
+       pFF->GetCoordinates(molCopy);
++      *pmol = molCopy;
+       return true; // no conformer searching
+     }
+ 

@@ -1,0 +1,20 @@
+[
+  {
+    "file": "OpenBabelCN.exe",
+    "bytes": 1297920,
+    "sha256": "fd80f5a9d85861adebf955826567d7df486ad6f39af0b1dbe0e3de58ff2c9a8c",
+    "pe_sections_complete": true
+  },
+  {
+    "file": "engine/obengine.exe",
+    "bytes": 8413184,
+    "sha256": "c3589a9ea3b527511a2f212befd8c96a85d5b0cdecfd06cd8fe163ce21aac861",
+    "pe_sections_complete": true
+  },
+  {
+    "file": "engine/obabel.exe",
+    "bytes": 8396288,
+    "sha256": "83bffbb82087ffcc864eec8cc237b0a1982e487c75aed495b3e87d8a317812ee",
+    "pe_sections_complete": true
+  }
+]
